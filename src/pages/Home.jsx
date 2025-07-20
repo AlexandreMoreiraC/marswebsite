@@ -16,10 +16,10 @@ export default function Home() {
 
     emailjs
       .sendForm(
-        "service_4rkvyvs",        // ID do serviço
-        "template_k04ccki",       // ID do template
+        "service_4rkvyvs",
+        "template_k04ccki",
         form.current,
-        "PgxHQsJgnsH0IoVii"       // Chave pública
+        "PgxHQsJgnsH0IoVii"
       )
       .then(
         (result) => {
@@ -84,8 +84,8 @@ export default function Home() {
       <section id="contato" className="contact">
         <h2>Contato</h2>
         <form ref={form} className="contact-form" onSubmit={sendEmail}>
-          <input type="text" name="user_name" placeholder="Seu nome" required />
-          <input type="email" name="user_email" placeholder="Seu email" required />
+          <input type="text" name="name" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu email" required />
           <textarea name="message" placeholder="Sua mensagem" required></textarea>
           <button type="submit">Enviar</button>
         </form>

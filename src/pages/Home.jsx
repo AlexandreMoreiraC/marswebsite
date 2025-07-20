@@ -16,18 +16,20 @@ export default function Home() {
 
     emailjs
       .sendForm(
-        "service_4rkvyvs",
-        "service_4rkvyvs",
+        "service_4rkvyvs",        // ID do serviço
+        "template_k04ccki",       // ID do template
         form.current,
-        "PgxHQsJgnsH0IoVii"
+        "PgxHQsJgnsH0IoVii"       // Chave pública
       )
       .then(
         (result) => {
+          console.log("✅ Email enviado:", result.text);
           alert("Mensagem enviada com sucesso!");
           e.target.reset();
         },
         (error) => {
-          alert("Erro ao enviar mensagem, tente novamente.");
+          console.error("❌ Erro ao enviar:", error);
+          alert("Erro ao enviar mensagem. Verifique sua conexão e tente novamente.");
         }
       );
   };

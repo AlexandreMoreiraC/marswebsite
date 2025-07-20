@@ -1,0 +1,42 @@
+.home {
+  min-height: 100vh;
+  padding-top: 80px; /* ajuste conforme a altura do seu header fixo */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00f7ff;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #00f7ff;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00c8d6;
+}

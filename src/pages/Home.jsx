@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       <section id="projetos" className="projects">
-        <h2>Projetos</h2>
+        <h2>Alguns dos meus trabalhos como desenvolvedor</h2>
         <div className="project-list">
           <div className="project-card">Projeto 1</div>
           <div className="project-card">Projeto 2</div>

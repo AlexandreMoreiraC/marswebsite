@@ -53,7 +53,7 @@ export default function Home() {
       <section id="sobre" className="about">
         <h2>Sobre Mim</h2>
         <p>
-          Olá! Meu nome é Ale e sou um desenvolvedor front-end apaixonado por criar experiências digitais envolventes, intuitivas e acessíveis.
+          Olá! Meu nome é Alexandre e sou um desenvolvedor front-end apaixonado por criar experiências digitais envolventes, intuitivas e acessíveis.
           Gosto de transformar ideias em interfaces que realmente funcionam — sempre com foco em design, performance e usabilidade.
         </p>
         <p>
@@ -75,9 +75,21 @@ export default function Home() {
       <section id="projetos" className="projects">
         <h2>Alguns dos meus trabalhos como desenvolvedor</h2>
         <div className="project-list">
-          <div className="project-card">Projeto 1</div>
-          <div className="project-card">Projeto 2</div>
-          <div className="project-card">Projeto 3</div>
+          <div className="project-card">
+             <h3>Loja Virtual</h3>
+             <br />
+            <img src="/delicias.png" alt="Delícias de Rua" className="project-image" />
+            <a href="https://delicias-da-rua.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
+            <a href="https://github.com/AlexandreMoreiraC/delicias-da-rua" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
+          </div>
+
+          <div className="project-card">
+            <h3>Landing Page</h3>
+            <br />
+            <img src="/portfolio.png" alt="Portfólio Pessoal" className="project-image" />
+            <a href="https://meu-portfolio-six-beige.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
+            <a href="https://github.com/AlexandreMoreiraC/meu-portfolio" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
+          </div>
         </div>
       </section>
 

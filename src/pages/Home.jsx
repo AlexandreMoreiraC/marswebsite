@@ -94,7 +94,7 @@ export default function Home() {
            <div className="project-card">
             <h3>Blog</h3>
             <br />
-            <img src="/Kloo.blog.png" alt="Portfólio Pessoal" className="project-image" />
+            <img src="/Kloo.png" alt="Portfólio Pessoal" className="project-image" />
             <a href="https://kloo-blog.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
             <a href="https://github.com/AlexandreMoreiraC/KlooBlog" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
           </div>

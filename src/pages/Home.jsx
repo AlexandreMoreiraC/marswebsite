@@ -90,17 +90,17 @@ export default function Home() {
             <a href="https://meu-portfolio-six-beige.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
             <a href="https://github.com/AlexandreMoreiraC/meu-portfolio" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
           </div>
-
-           <div className="project-card">
+          
+        <div className="project-card">
             <h3>Blog</h3>
             <br />
-            <img src="/kloo.png" alt="Blog" className="project-image" />
-            <a href="https://kloo-blog.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/KlooBlog" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
+            <img src="/blog.png" alt="Blog" className="project-image" />
+            <a href="https://grow-up-neg-cios.vercel.app" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
+            <a href="https://github.com/AlexandreMoreiraC/GrowUpNeg-cios" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
           </div>
-        </div>
+          </div>
+        
       </section>
-
       <section id="contato" className="contact">
         <h2>Contato</h2>
         <form ref={form} className="contact-form" onSubmit={sendEmail}>

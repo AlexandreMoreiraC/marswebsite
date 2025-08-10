@@ -102,7 +102,7 @@ export default function Home() {
           <div className="project-card">
             <h3>Site institucional</h3>
             <br />
-            <img src="/blog.png" alt="Blog" className="project-image" />
+            <img src="/institucional.png" alt="Blog" className="project-image" />
             <a href="https://estetica1-bay.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
             <a href="https://github.com/AlexandreMoreiraC/estetica1" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
           </div>

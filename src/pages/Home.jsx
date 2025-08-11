@@ -100,11 +100,19 @@ export default function Home() {
           </div>
 
           <div className="project-card">
-            <h3>Site institucional</h3>
+            <h3>WebSite Estética</h3>
             <br />
             <img src="/institucional.png" alt="Blog" className="project-image" />
             <a href="https://estetica1-bay.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
             <a href="https://github.com/AlexandreMoreiraC/estetica1" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
+          </div>
+
+            <div className="project-card">
+            <h3>WebSite Barbearia</h3>
+            <br />
+            <img src="/barbearia.png" alt="Blog" className="project-image" />
+            <a href="https://barbearia1-lilac.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
+            <a href="https://github.com/AlexandreMoreiraC/barbearia1" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
           </div>
           </div>
         

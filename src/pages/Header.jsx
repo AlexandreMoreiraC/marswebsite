@@ -34,7 +34,7 @@ export default function Header() {
     >
       <a href="/" className="logo-link" aria-label="Página inicial MarsWebsites">
         <img
-          src="/public/logo.png" 
+          src="/images/logo.png" 
           alt="Logo MarsWebsites"
           className="logo"
         />

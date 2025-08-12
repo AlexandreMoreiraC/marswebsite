@@ -109,19 +109,19 @@ export default function Home() {
         title: "Projeto A",
         desc: "Site para Barbearia.",
         link: "https://barbearia1-lilac.vercel.app/",
-        img: "/public/barbearia.png",
+        img: "/images/barbearia.png",
       },
       {
         title: "Projeto B",
         desc: "Blog Pessoal / Profissional.",
         link: "https://grow-up-neg-cios.vercel.app/",
-        img: "/public/blog.png",
+        img: "/images/blog.png",
       },
       {
         title: "Projeto C",
         desc: "Site para Estética.",
         link: "https://estetica1-bay.vercel.app/",
-        img: "/public/estetica.png",
+        img: "/images/estetica.png",
       },
     ].map(({ title, desc, link, img }) => (
       <motion.div

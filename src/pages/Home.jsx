@@ -106,19 +106,19 @@ export default function Home() {
     <h3 className="section-title">Projetos Recentes</h3>
     {[
       {
-        title: "Projeto A",
+        title: "Barber Shop",
         desc: "Site para Barbearia.",
         link: "https://barbearia1-lilac.vercel.app/",
         img: "/images/barbearia.png",
       },
       {
-        title: "Projeto B",
+        title: "GrowUp Negócios",
         desc: "Blog Pessoal / Profissional.",
         link: "https://grow-up-neg-cios.vercel.app/",
         img: "/images/blog.png",
       },
       {
-        title: "Projeto C",
+        title: "Estética",
         desc: "Site para Estética.",
         link: "https://estetica1-bay.vercel.app/",
         img: "/images/estetica.png",
@@ -156,8 +156,8 @@ export default function Home() {
             variants={fadeUp}
           >
             <h3 className="section-title">Contato</h3>
-            <p>Email: alexandremoreiradev@outlook.pt</p>
-            <p>Telefone: +351 964-766-822</p>
+            <p>alexandremoreiradev@outlook.pt</p>
+            <p>+351 964-766-822</p>
             <p>LISBOA - PORTUGAL</p>
           </motion.div>
         </section>

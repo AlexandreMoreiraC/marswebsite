@@ -1,131 +1,185 @@
-import React, { useRef } from "react";
-import { Link } from "react-scroll";
-import emailjs from "@emailjs/browser";
+import React from "react";
+import { motion } from "framer-motion";
+import "../styles/Home.css";
+import '../styles/Global.css';
 
-import "./styles/Home.css";
-import "./styles/About.css";
-import "./styles/Services.css";
-import "./styles/Projects.css";
-import "./styles/Contact.css";
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const pulse = {
+  animate: {
+    scale: [1, 1.05, 1],
+    transition: { duration: 2, repeat: Infinity },
+  },
+};
 
 export default function Home() {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_4rkvyvs",
-        "template_k04ccki",
-        form.current,
-        "PgxHQsJgnsH0IoVii"
-      )
-      .then(
-        (result) => {
-          console.log("✅ Email enviado:", result.text);
-          alert("Mensagem enviada com sucesso!");
-          e.target.reset();
-        },
-        (error) => {
-          console.error("❌ Erro ao enviar:", error);
-          alert("Erro ao enviar mensagem. Verifique sua conexão e tente novamente.");
-        }
-      );
-  };
-
   return (
     <>
-      <section id="inicio" className="home">
-        <video className="bg-video" autoPlay muted loop playsInline>
-          <source src="/fundo.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-        <div className="home-content">
-          <h1>Olá, eu sou o Alexandre</h1>
-          <p>Desenvolvedor Front-End focado em criar experiências digitais únicas.</p>
-          <Link to="projetos" smooth={true} duration={500} offset={-70} className="btn">
-            Ver Projetos
-          </Link>
-        </div>
-      </section>
+      <main className="home-container">
+        <section id="inicio" className="hero-section">
+          <motion.div
+            className="hero-overlay"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+          >
+            <h2 className="hero-title">Transforme sua ideia em um site incrível e irresistível</h2>
+            <p className="hero-text">
+             Design poderoso, soluções inteligentes e resultados que brilham no mercado.
+            </p>
+            <motion.button
+              className="btn-primary"
+              variants={pulse}
+              animate="animate"
+              onClick={() => window.open("https://wa.me/351964766822", "_blank")}
+            >
+              Quero meu site!
+            </motion.button>
+          </motion.div>
+        </section>
 
-      <section id="sobre" className="about">
-        <h2>Sobre Mim</h2>
-        <p>
-          Olá! Meu nome é Alexandre e sou um desenvolvedor front-end apaixonado por criar experiências digitais envolventes, intuitivas e acessíveis.
-          Gosto de transformar ideias em interfaces que realmente funcionam — sempre com foco em design, performance e usabilidade.
-        </p>
-        <p>
-          Tenho conhecimento em React, JavaScript, HTML, CSS e ferramentas modernas do ecossistema web. Busco constantemente aprender novas tecnologias e evoluir como profissional.
-          Acredito que cada projeto é uma oportunidade de crescimento e de impactar positivamente a vida das pessoas através da tecnologia.
-        </p>
-      </section>
+        <section id="sobre" className="section about-section">
+          <motion.div
+            className="container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
+            <h3 className="section-title">Sobre Nós</h3>
+            
+<p>Na MarsWebsites, somos apaixonados por criar sites modernos, personalizados e estratégicos.</p> 
+<p>Acreditamos que cada marca é única e merece uma presença digital que reflita sua essência, valores e objetivos.</p> 
+<p>Por isso, desenvolvemos soluções sob medida, combinando design inovador, tecnologia avançada e usabilidade para oferecer uma experiência online impactante e eficiente.</p> 
+<p>Nosso foco é elevar sua marca ao próximo nível, ajudando você a conquistar mais clientes, fortalecer sua identidade e alcançar resultados reais. Com a MarsWebsites, seu site não é apenas uma vitrine, mas uma poderosa ferramenta de crescimento.</p>
+            
+          </motion.div>
+        </section>
 
-      <section id="servicos" className="services">
-        <h2>Serviços</h2>
-        <ul>
-          <li>Criação de sites</li>
-          <li>Blogs personalizados</li>
-          <li>Lojas virtuais</li>
-          <li>Landing pages</li>
-        </ul>
-      </section>
+        <section id="servicos" className="section services-section">
+          <motion.div
+            className="container cards-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={containerVariants}
+          >
+            <h3 className="section-title">Serviços</h3>
+            {["Criação de Sites Personalizados", "Aluguel de Sites Prontos", "Manutenção e Suporte Técnico"].map((title) => (
+              <motion.div
+                className="project-card"
+                key={title}
+                variants={fadeUp}
+                viewport={{ once: true }}
+              >
+                <h4>{title}</h4>
+                <p>
+                  {title === "Criação de Sites Personalizados" && "Desenvolvemos sites sob medida, com design exclusivo, responsivos e integrados às suas redes sociais e WhatsApp."}
+                  {title === "Aluguel de Sites Prontos" && "Oferecemos sites profissionais prontos para uso, com hospedagem, domínio, personalização rápida e manutenção inclusa."}
+                  {title === "Manutenção e Suporte Técnico" && "Garantimos a segurança, atualização e funcionamento contínuo do seu site, com suporte rápido e consultoria especializada."}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
 
-      <section id="projetos" className="projects">
-        <h2>Alguns dos meus trabalhos como desenvolvedor</h2>
-        <div className="project-list">
-          <div className="project-card">
-             <h3>Loja Virtual</h3>
-             <br />
-            <img src="/delicias.png" alt="Delícias de Rua" className="project-image" />
-            <a href="https://delicias-da-rua.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/delicias-da-rua" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
-          </div>
+        <section id="projetos" className="section projects-section">
+  <motion.div
+    className="container cards-container"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+    variants={containerVariants}
+  >
+    <h3 className="section-title">Projetos Recentes</h3>
+    {[
+      {
+        title: "Projeto A",
+        desc: "Site para Barbearia.",
+        link: "https://barbearia1-lilac.vercel.app/",
+        img: "/public/barbearia.png",
+      },
+      {
+        title: "Projeto B",
+        desc: "Blog Pessoal / Profissional.",
+        link: "https://grow-up-neg-cios.vercel.app/",
+        img: "/public/blog.png",
+      },
+      {
+        title: "Projeto C",
+        desc: "Site para Estética.",
+        link: "https://estetica1-bay.vercel.app/",
+        img: "/public/estetica.png",
+      },
+    ].map(({ title, desc, link, img }) => (
+      <motion.div
+        className="project-card"
+        key={title}
+        variants={fadeUp}
+        viewport={{ once: true }}
+      >
+        <h4>{title}</h4>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={img}
+            alt={`Screenshot do ${title}`}
+            style={{ width: "100%", cursor: "pointer", borderRadius: "8px" }}
+          />
+        </a>
+        <p>{desc}</p>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
+          Visitar site
+        </a>
+      </motion.div>
+    ))}
+  </motion.div>
+</section>
 
-          <div className="project-card">
-            <h3>Landing Page</h3>
-            <br />
-            <img src="/portfolio.png" alt="Portfólio Pessoal" className="project-image" />
-            <a href="https://meu-portfolio-six-beige.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/meu-portfolio" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
-          </div>
-          
-        <div className="project-card">
-            <h3>Blog</h3>
-            <br />
-            <img src="/blog.png" alt="Blog" className="project-image" />
-            <a href="https://grow-up-neg-cios.vercel.app" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/GrowUpNeg-cios" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
-          </div>
+        <section id="contato" className="section contact-section">
+          <motion.div
+            className="container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+          >
+            <h3 className="section-title">Contato</h3>
+            <p>Email: alexandremoreiradev@outlook.pt</p>
+            <p>Telefone: +351 964-766-822</p>
+            <p>LISBOA - PORTUGAL</p>
+          </motion.div>
+        </section>
+      </main>
 
-          <div className="project-card">
-            <h3>WebSite Estética</h3>
-            <br />
-            <img src="/institucional.png" alt="Blog" className="project-image" />
-            <a href="https://estetica1-bay.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/estetica1" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
-          </div>
-
-            <div className="project-card">
-            <h3>WebSite Barbearia</h3>
-            <br />
-            <img src="/barbearia.png" alt="Blog" className="project-image" />
-            <a href="https://barbearia1-lilac.vercel.app/" target="_blank" rel="noopener noreferrer">🔗 Ver site</a> |
-            <a href="https://github.com/AlexandreMoreiraC/barbearia1" target="_blank" rel="noopener noreferrer">📁 GitHub</a>
-          </div>
-          </div>
-        
-      </section>
-      <section id="contato" className="contact">
-        <h2>Contato</h2>
-        <form ref={form} className="contact-form" onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Seu nome" required />
-          <input type="email" name="email" placeholder="Seu email" required />
-          <textarea name="message" placeholder="Sua mensagem" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+      <a
+        href="https://wa.me/351964766822"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-float"
+        aria-label="WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="#25D366"
+          viewBox="0 0 24 24"
+        >
+          <path d="M20.52 3.48A11.918 11.918 0 0 0 12 0C5.372 0 0 5.372 0 12a11.91 11.91 0 0 0 2.43 7.44L0 24l4.69-2.43A11.91 11.91 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.182-1.243-6.167-3.48-8.52zm-2.092 13.5c-.323.9-1.86 1.74-2.54 1.86-.678.12-1.315.17-3.11-.91-2.47-1.39-4.08-4.62-4.22-4.85-.15-.23-1.2-1.59-1.2-3.04 0-1.45.77-2.16 1.043-2.46.27-.31.6-.38.82-.38.22 0 .45 0 .65.01.21.01.5-.08.77.58.27.67.92 2.31.98 2.49.07.18.11.39.01.61-.1.22-.15.36-.3.57-.15.21-.32.45-.45.6-.15.18-.3.38-.14.62.16.24.7 1.15 1.5 1.86 1.03.95 1.8 1.21 2.11 1.35.3.14.47.12.64-.07.17-.19.67-.79.85-1.07.18-.28.37-.23.64-.14.27.08 1.72.81 2.02.95.3.15.5.23.57.36.07.13.07.77-.24 1.68z"/>
+        </svg>
+      </a>
     </>
   );
 }

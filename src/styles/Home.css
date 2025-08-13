@@ -5,6 +5,37 @@
   color: #222222;
   min-height: 100vh;
 }
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image {
+  position: absolute;
+  top: 250px;
+  left: -26rem; 
+  transform: translateY(-50%);
+  max-width: 370px;
+  width: 100%;
+  pointer-events: none;
+}
+
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
 
 .hero-section {
   position: relative;

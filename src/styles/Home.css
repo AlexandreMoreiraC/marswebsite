@@ -22,7 +22,7 @@
 
 .hero-image {
   position: absolute;
-  top: 250px;
+  top: 280px;
   left: -26rem; 
   transform: translateY(-50%);
   max-width: 370px;
@@ -136,18 +136,47 @@
 }
 
 /* Seção contato */
-
 .contact-section {
-  background: #f0f0f0;
+  background: #f9f9f9;
   text-align: center;
-  color: #333;
-  padding-bottom: 6rem;
+  color: #222;
+  padding: 4rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111;
 }
 
 .contact-section p {
-  font-size: 1.1rem;
-  margin: 0.3rem 0;
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  max-width: 480px;
 }
+
+.contact-section a {
+  color: #e81a1a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contact-section h2 {
+    font-size: 1.75rem;
+  }
+  .contact-section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
 .whatsapp-float {
   position: fixed;
   width: 56px;

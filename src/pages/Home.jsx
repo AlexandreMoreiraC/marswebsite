@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import "../styles/Home.css";
 import "../styles/Global.css";
@@ -25,6 +26,41 @@ const pulse = {
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Criação e Aluguel de Sites Profissionais | MarsWebsites</title>
+        <meta
+          name="description"
+          content="MarsWebsites cria sites modernos, rápidos e personalizados para empresas e profissionais em Lisboa e Brasil. Transforme sua presença online com design de impacto e performance otimizada."
+        />
+        <meta
+          name="keywords"
+          content="criação de sites Lisboa, criação de sites Brasil, aluguel de sites, sites profissionais, sites responsivos, desenvolvimento web"
+        />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Criação e Aluguel de Sites | MarsWebsites" />
+        <meta
+          property="og:description"
+          content="Sites modernos, rápidos e personalizados para empresas e profissionais em Lisboa e Brasil."
+        />
+        <meta property="og:image" content="https://www.marswebsites.com/images/preview.jpg" />
+        <meta property="og:url" content="https://www.marswebsites.com/" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Criação e Aluguel de Sites | MarsWebsites" />
+        <meta
+          name="twitter:description"
+          content="Sites modernos, rápidos e personalizados para empresas e profissionais em Lisboa e Brasil."
+        />
+        <meta name="twitter:image" content="https://www.marswebsites.com/images/preview.jpg" />
+
+        <meta name="geo.region" content="PT-LIS" />
+        <meta name="geo.placename" content="Lisboa" />
+        <meta name="geo.position" content="38.7169;-9.1391" />
+        <meta name="ICBM" content="38.7169, -9.1391" />
+      </Helmet>
+
       <main className="home-container">
         <section id="inicio" className="hero-section" aria-labelledby="hero-title">
           <motion.div
@@ -45,8 +81,8 @@ export default function Home() {
                 Criação de Sites Profissionais e Responsivos para Seu Negócio
               </h1>
               <p className="hero-text">
-                Transforme sua ideia em um site incrível, moderno e otimizado para atrair clientes.
-                Design de impacto, performance otimizada e estratégias digitais inteligentes.
+                Transforme sua ideia em um site profissional, moderno e totalmente otimizado para conquistar clientes.
+                Design de alto impacto, performance máxima e estratégias digitais inteligentes para o seu negócio crescer.
               </p>
               <motion.button
                 className="btn-primary"
@@ -70,15 +106,16 @@ export default function Home() {
             variants={fadeUp}
           >
             <h2 id="sobre-title" className="section-title">Sobre a MarsWebsites</h2>
-            <p>
-              A <strong>MarsWebsites</strong> desenvolve sites modernos, personalizados e estratégicos para empresas e profissionais que buscam destaque online.
-            </p>
-            <p>
-              Criamos experiências digitais únicas que refletem a identidade, os valores e os objetivos de cada marca.
-            </p>
-            <p>
-              Nossos projetos unem <em>design responsivo</em>, tecnologia avançada e SEO para oferecer performance e conversão.
-            </p>
+<p>
+  A <strong>MarsWebsites</strong> cria sites modernos, personalizados e estratégicos para empresas e profissionais em Portugal e Brasil que desejam se destacar online.
+</p>
+<p>
+  Desenvolvemos experiências digitais únicas que refletem a identidade, os valores e os objetivos de cada marca, garantindo presença online memorável.
+</p>
+<p>
+  Nossos projetos combinam <em>design responsivo</em>, tecnologia avançada e técnicas de SEO, proporcionando performance otimizada, visibilidade no Google e aumento de conversão.
+</p>
+
           </motion.div>
         </section>
 
@@ -132,6 +169,12 @@ export default function Home() {
                 desc: "Site moderno para barbearia, com agendamento online e galeria de cortes.",
                 link: "https://barbearia1-lilac.vercel.app/",
                 img: "/images/barbearia.png",
+              },
+              {
+                title: "Bio Site",
+                desc: "Bio site moderno e futurista para Mars Websites, com animações, vídeo de fundo, links para redes sociais e foco em experiências digitais que impressionam.",
+                link: "https://site-bio-eight.vercel.app/",
+                img: "/images/biosite.png",
               },
               {
                 title: "GrowUp Negócios",

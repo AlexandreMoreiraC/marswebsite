@@ -176,6 +176,12 @@ export default function Home() {
                 link: "https://site-bio-eight.vercel.app/",
                 img: "/images/biosite.png",
               },
+                {
+                title: "KlooFlip",
+                desc: "Jogo Interativo.",
+                link: "https://momory-rho.vercel.app/",
+                img: "/images/Jogo.png",
+              },
               {
                 title: "GrowUp Negócios",
                 desc: "Blog empresarial com foco em empreendedorismo e marketing.",

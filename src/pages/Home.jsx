@@ -224,6 +224,15 @@ export default function Home() {
               <p>LISBOA - PORTUGAL</p>
             </address>
           </motion.div>
+                        <motion.button
+                className="btn-primary"
+                variants={pulse}
+                animate="animate"
+                onClick={() => window.open("https://wa.me/351964766822", "_blank")}
+                aria-label="Solicitar orçamento pelo WhatsApp"
+              >
+                Quero meu site!
+              </motion.button>
         </section>
       </main>
 

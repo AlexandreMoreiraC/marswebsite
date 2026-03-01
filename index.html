@@ -245,30 +245,80 @@
             </div>
         </header>
 
-        <section id="sobre" class="section-padding">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-photo-container" data-aos="zoom-in">
-                        <img src="https://via.placeholder.com/600x600?text=Sua+Foto+Aqui" alt="Alexandre Moreira" class="about-photo">
-                    </div>
-                    <div class="about-text" data-aos="fade-left">
-                        <h2 class="section-title">Muito prazer, sou o Alexandre.</h2>
-                        <p style="color: var(--text-dim); margin-bottom: 20px;">
-                            Com anos de experiência no mercado digital, especializei-me no que realmente importa para o empresário: <strong>conversão</strong>. 
-                        </p>
-                        <p style="color: var(--text-dim); margin-bottom: 20px;">
-                            Meu processo une psicologia de vendas, design estratégico e copy persuasiva. Não faço apenas "sites", crio a porta de entrada para o sucesso do seu negócio.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">UI/UX Design</span>
-                            <span class="tag">Copywriting</span>
-                            <span class="tag">Otimização de Conversão (CRO)</span>
-                        </div>
-                    </div>
+       <section id="sobre" class="section-padding">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-photo-container" data-aos="zoom-in">
+                <div class="about-photo-wrapper">
+                    <img src="https://res.cloudinary.com/dliyfpqqu/image/upload/v1772388934/myckdzgcaj5m7jbsmo8d.jpg" 
+                         alt="Alexandre Moreira" class="about-photo">
                 </div>
             </div>
-        </section>
+            <div class="about-text" data-aos="fade-left">
+                <h2 class="section-title">Muito prazer, sou o Alexandre.</h2>
+                <p style="color: var(--text-dim); margin-bottom: 20px;">
+                    Com anos de experiência no mercado digital, especializei-me no que realmente importa para o empresário: <strong>conversão</strong>. 
+                </p>
+                <p style="color: var(--text-dim); margin-bottom: 20px;">
+                    Meu processo une psicologia de vendas, design estratégico e copy persuasiva. Não faço apenas "sites", crio a porta de entrada para o sucesso do seu negócio.
+                </p>
+                <div class="tags">
+                    <span class="tag">UI/UX Design</span>
+                    <span class="tag">Copywriting</span>
+                    <span class="tag">Otimização de Conversão (CRO)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<style>
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-photo-container {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-photo-wrapper {
+    width: 100%;
+    max-width: 400px; 
+    min-height: 450px; 
+    aspect-ratio: 9 / 16; 
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0; 
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 2 1 400px;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-photo-wrapper {
+        max-width: 250px;
+        min-height: 350px;
+    }
+}
+</style>
         <section id="especialidades" class="section-padding" style="background: #080808;">
             <div class="container">
                 <div class="section-header">
